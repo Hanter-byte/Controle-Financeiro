@@ -26,7 +26,7 @@
                             <TapGestureRecognizer CommandParameter="{Binding .}" Tapped="TapGestureRecognizerTapped_To_TransactionEdit" />
                         </Grid.GestureRecognizers>
                         <Border
-                            BackgroundColor="{Binding Name, Converter={StaticResource TransactionNameColorConverter}}"
+                            BackgroundColor="RoyalBlue"
                             HeightRequest="40"
                             Stroke="Transparent"
                             StrokeShape="RoundRectangle 20"
@@ -37,12 +37,13 @@
                             <Label
                                 Margin="11,2"
                                 Padding="2"
+                                TextColor="White"
                                 FontSize="20"
                                 Text="{Binding Name, Converter={StaticResource TransactionNameConverter}}" />
                         </Border>
                         <VerticalStackLayout Grid.Column="1">
-                            <Label Text="{Binding Name}" />
-                            <Label Text="{Binding Date, StringFormat='{0:dd/MM/yyyy}'}" TextColor="#BABABA" />
+                            <Label TextColor="Black" Text="{Binding Name}" />
+                            <Label TextColor="DarkGray" Text="{Binding Date, StringFormat='{0:dd/MM/yyyy}'}" />
                         </VerticalStackLayout>
                         <Label
                             Grid.Column="2"
@@ -67,7 +68,7 @@
                     Margin="10,0"
                     FontSize="18"
                     Text="Saldo"
-                    TextColor="#979797" />
+                    TextColor="White" />
                 <Label
                     x:Name="LabelBalance"
                     Grid.Row="1"
@@ -84,6 +85,7 @@
                                           Android=36}"
                     HeightRequest="54"
                     HorizontalOptions="Center"
+                    TextColor="White"
                     Text="+"
                     WidthRequest="54" />
 
@@ -92,7 +94,7 @@
                     Margin="10,0"
                     FontSize="8"
                     Text="Receitas"
-                    TextColor="#979797" />
+                    TextColor="White" />
                 <Label
                     x:Name="LabelIncome"
                     Grid.Row="4"
@@ -105,7 +107,7 @@
                     Grid.Column="1"
                     FontSize="8"
                     Text="Despesas"
-                    TextColor="#979797" />
+                    TextColor="White" />
                 <Label
                     x:Name="LabelExpense"
                     Grid.Row="4"
